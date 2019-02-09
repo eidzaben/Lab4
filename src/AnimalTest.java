@@ -40,6 +40,18 @@ public class AnimalTest
     	String expectedColor = "blue";
     	String expectedName = "swan";
     	double expectedHeight = 5.4;
+    	double expectedWeight = 3.3;
+    	
+    	try {
+		Assert.assertEquals(expectedColor, animal.getColor());
+		Assert.assertEquals(expectedName, animal.getName());
+    	Assert.assertEquals(expectedHeight, animal.getHeight(), 0.01);
+    	Assert.assertEquals(expectedWeight, animal.getWeight(), 0.01);
+		} catch (AssertException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
     	
     	
     	
@@ -47,9 +59,11 @@ public class AnimalTest
     }
     
     
-    public void toStringTest() {
+    public void toStringTest() throws AssertException {
     	Animal animal = new Animal("blue", "swan", 5.4, 3.3);
-    	
+    	String expectedToString = "swan, a blue-colored animal. 5.4 pounds, 3.3 inches.\n";
+    	Assert.assertEquals(expectedToString, animal.toString());
+    			//"(name), a (color)-colored animal. (weight) pounds, (height) inches.\n"
     }
 }
 
