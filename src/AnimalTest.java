@@ -10,6 +10,7 @@ public class AnimalTest
     /**
      * Test the empty Animal constructor and the getters
      */
+	//git check
     public void emptyConstructorTest() throws AssertException
     {
         // Use the default constructor
