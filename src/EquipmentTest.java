@@ -11,8 +11,23 @@ public class EquipmentTest {
 			
 			
 }
-	
-	
+	public void gettersTest() throws AssertException {
+		Equipment eq = new Equipment("Bomb/1,50.6,70.6,Something you sometimes just can't get rid of");
+		String expectedName = "Bomb";
+		int expectedCount = 1;
+		double expectedWeight = 50.6;
+		double expectedPrice = 70.6;
+		String expectedDescription = "Something you sometimes just can't get rid of";
+		
+		
+		Assert.assertEquals(expectedName, eq.getName());
+		Assert.assertEquals(expectedCount, eq.getCount());
+		Assert.assertEquals(expectedWeight, eq.getTotalWeight(), .01);
+		Assert.assertEquals(expectedPrice, eq.getTotalPrice(), .01);
+		Assert.assertEquals(expectedDescription, eq.getDescription());
+		
+	}
+		
 	
 
 
