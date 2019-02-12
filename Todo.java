@@ -1,6 +1,6 @@
 public class Todo {/*
 Lab Section_________: 11
-Last Modified_______: 2019-XX-XX
+Last Modified_______: 2019-02-12
 OU ID_______________: 113334522
 OU EMAIL____________: eid.s.zaben-1@ou.edu
 
@@ -20,8 +20,8 @@ Estimated Time (minutes):
 
 Actual Time (minutes):
 1. 50
-2. 
-3. 
-4. 
+2. 30
+3. 45
+4. 40
 5. 30
 */}
