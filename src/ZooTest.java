@@ -1,12 +1,12 @@
 public class ZooTest {
-
+/*
 	public void zooConstructorTest() throws AssertException {
 		Zoo zoo = new Zoo(20);
 		int expCapacity = 20;
 		Animal[] expAnimals = new Animal[20];
 
 		Assert.assertEquals(expCapacity, zoo.getCapacity());
-		Assert.assertEquals(expAnimals, zoo.getAnimals());
+		Assert.assertEquals(expAnimals[0], zoo.getAnimals()[0]);
 
 	}
 
@@ -57,6 +57,28 @@ public class ZooTest {
 		Assert.assertEquals(expected, zoo.toString());
 		
 
+	}
+	*/
+	
+	
+	public void zooCheck() throws AssertException {
+		Animal monkey = new Animal("Brown", "George", 20.2, 23.3);
+		Animal snake = new Animal("Green", "Sly", 5.2, 12.5);
+		Animal elephant = new Animal("Gray", "Trunk", 521.4, 120.3);
+		int capacity = 2;
+		Zoo zoo = new Zoo(capacity);
+		zoo.addAnimal(monkey);
+		zoo.addAnimal(snake);
+		zoo.addAnimal(elephant);
+		
+		Assert.assertEquals(capacity*2, zoo.getCapacity());
+		
+		Assert.assertEquals(156.1, zoo.getTotalHeight());
+		
+		Assert.assertEquals(182.26, zoo.getAverageWeight());
+		
+		Assert.assertEquals(20.2, zoo.getAverageWeight("Brown"));
+		
 	}
 
 }
