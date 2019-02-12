@@ -40,7 +40,7 @@ public class ZooTest {
 		Assert.assertEquals(expectedTotalHeight, zoo.getTotalHeight(), .01);
 		Assert.assertEquals(expectedAverageWeight, zoo.getAverageWeight(), 0.01);
 		Assert.assertEquals(expectedAverageWeightGreen, zoo.getAverageWeight("Green"), 0.01);
-		Assert.assertEquals(expectedAnimals, zoo.getAnimals());
+		Assert.assertEquals(expectedAnimals[0], zoo.getAnimals()[0]);
 
 
 	}
@@ -51,8 +51,8 @@ public class ZooTest {
 		zoo.addAnimal(monkey);
 		Animal snake = new Animal("Green", "Sly", 10, 2);
 		zoo.addAnimal(snake);
-		String expected = "These animals live in the zoo: \nGeorge, a Brown-colored animal. 20.0 pounds, 3 inches\n"
-				+ "Sly, a Green-colored animal. 10.0 pounds, 2 inches\n";
+		String expected = "These animals live in the zoo: \nGeorge, a Brown-colored animal. 20.0 pounds, 3.0 inches\n"
+				+ "Sly, a Green-colored animal. 10.0 pounds, 2.0 inches\n";
 		
 		Assert.assertEquals(expected, zoo.toString());
 		
