@@ -45,8 +45,17 @@ public class ZooTest {
 
 	}
 
-	public void toStringTest() {
-		String expected = "These animals live in the zoo: \n";
+	public void toStringTest() throws AssertException {
+		Zoo zoo = new Zoo(20);
+		Animal monkey = new Animal("Brown", "George", 20, 3);
+		zoo.addAnimal(monkey);
+		Animal snake = new Animal("Green", "Sly", 10, 2);
+		zoo.addAnimal(snake);
+		String expected = "These animals live in the zoo: \n George, a Brown-colored animal. 20.0 pounds, 3 inches\n "
+				+ "Sly, a Green-colored animal. 10.0 pounds, 2 inches\\n";
+		
+		Assert.assertEquals(expected, zoo.toString());
+		
 
 	}
 
