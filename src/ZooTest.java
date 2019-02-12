@@ -73,11 +73,11 @@ public class ZooTest {
 		
 		Assert.assertEquals(capacity*2, zoo.getCapacity());
 		
-		Assert.assertEquals(156.1, zoo.getTotalHeight());
+		Assert.assertEquals(156.1, zoo.getTotalHeight(), .01);
 		
-		Assert.assertEquals(182.26, zoo.getAverageWeight());
+		Assert.assertEquals(182, zoo.getAverageWeight());
 		
-		Assert.assertEquals(20.2, zoo.getAverageWeight("Brown"));
+		Assert.assertEquals(20, zoo.getAverageWeight("Brown"));
 		
 	}
 
