@@ -35,7 +35,7 @@ public class AnimalTest
     	
     }
     
-    public void gettersTest() {
+  /*  public void gettersTest() {
     	Animal animal = new Animal("blue", "swan", 5.4, 3.3);
     	String expectedColor = "blue";
     	String expectedName = "swan";
@@ -57,11 +57,12 @@ public class AnimalTest
     	
     	
     }
+    */
     
     
     public void toStringTest() throws AssertException {
     	Animal animal = new Animal("blue", "swan", 5.4, 3.3);
-    	String expectedToString = "swan, a blue-colored animal. 5.4 pounds, 3.3 inches.\n";
+    	String expectedToString = "swan, a blue-colored animal. 5.4 pounds, 3.3 inches\n";
     	Assert.assertEquals(expectedToString, animal.toString());
     			//"(name), a (color)-colored animal. (weight) pounds, (height) inches.\n"
     }

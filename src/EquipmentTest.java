@@ -28,7 +28,12 @@ public class EquipmentTest {
 		
 	}
 		
-	
+	public void toStringTest() throws AssertException {
+		Equipment eq = new Equipment("Bomb/1,50.6,70.6,Something you sometimes just can't get rid of");
+		String expectedToString = "Name: Bomb, Number: 1, Weight: 50.6 lbs, Price: $70.6 - Something you sometimes just can't get rid of";
+		
+		Assert.assertEquals(expectedToString, eq.toString());
+	}
 
 
 }
