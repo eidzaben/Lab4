@@ -59,7 +59,7 @@ public class AnimalTest
     }
     */
     
-    
+    //Checking the toString's output
     public void toStringTest() throws AssertException {
     	Animal animal = new Animal("blue", "swan", 5.4, 3.3);
     	String expectedToString = "swan, a blue-colored animal. 5.4 pounds, 3.3 inches\n";
